@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#home-section,
+#weather-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+#weather-section {
+    display: none;
+}
+
+input {
+    padding: 8px;
+    margin: 8px 0;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#weather-icon img {
+    max-width: 100px;
+}
+
+#units-toggle {
+    padding: 8px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#units-toggle:hover {
+    background-color: #005bb5;
+}
+
+@media only screen and (min-width: 600px) {
+    #home-section,
+    #weather-section {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #home-section,
+    #weather-section {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #home-section,
+    #weather-section {
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #home-section,
+    #weather-section {
+        max-width: 1200px;
+    }
+}
+

@@ -1,5 +1,5 @@
 let secretNumber = getRandomNumber(0, 9);
-let attempts = 7;
+let attempts = 3;
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

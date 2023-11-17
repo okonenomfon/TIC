@@ -6,24 +6,32 @@ function getRandomNumber(min, max) {
 }
 
 function makeGuess() {
-    let guess = document.getElementById('guess').value;
-    if (guess < 1 || guess > 9) {
-        alert('Please enter a number between 0 and 9.');
+    let guessInput = document.getElementById('guess');
+    let resultDisplay = document.getElementById('result');
+    let correctAnswerDisplay = document.getElementById('correct-answer');
+
+    let guess = parseInt(guessInput.value);
+
+    if (isNaN(guess) || guess < 1 || guess > 9) {
+        alert('Please enter a number between 1 and 9.');
         return;
     }
 
     attempts--;
 
-    if (guess == secretNumber) {
-        document.getElementById('result').innerHTML = `Congratulations! You guessed the correct number in ${7 - attempts} attempts!`;
-    } else if (guess < secretNumber) {
-        document.getElementById('result').innerHTML = `Your guess is too low. ${attempts} attempts remaining.`;
-    } else if (guess > secretNumber) {
-        document.getElementById('result').innerHTML = `Your guess is too high. ${attempts} attempts remaining.`;
+    if (guess === secretNumber) {
+        resultDisplay.innerHTML = `Congratulations! You guessed the correct number in ${3 - attempts} attempts!`;
+    } else if (attempts > 0) {
+        if (guess < secretNumber) {
+            resultDisplay.innerHTML = `Your guess is too low. ${attempts} attempts remaining.`;
+        } else {
+            resultDisplay.innerHTML = `Your guess is too high. ${attempts} attempts remaining.`;
+        }
     }
 
     if (attempts === 0) {
-        alert('Game over!');
-        location.reload();
+        resultDisplay.innerHTML = `Game over! The correct number was ${secretNumber}.`;
+        correctAnswerDisplay.style.display = 'block';
+        guessInput.disabled = true;
     }
 }

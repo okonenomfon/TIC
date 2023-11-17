@@ -1,20 +1,26 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #2c2c2c;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    background-color: #4d4d4d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 button {
@@ -23,8 +29,15 @@ button {
     color: #363434;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
     background-color: #028d25;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
 }
